@@ -26,7 +26,7 @@ variable "logging_close_on_delete" {
 
 variable "logging_account_friendlyname" {
   description = "The Friendly Name for the Logging Account"
-  default = "Logging"
+  default = "Log Archive"
 }
 
 variable "logging_account_email" {

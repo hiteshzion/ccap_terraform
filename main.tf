@@ -7,9 +7,19 @@ terraform {
   }
 }
 
+terraform {
+ backend "s3" {
+   bucket = "ccap-control-tower-terraform-state-bucket"
+   key = "terraform.tfstate"
+   region = "us-east-1"
+ }
+}
+
 # Configure the AWS provider
 provider "aws" {
   region = "${var.region}" # region = "us-east-2"
   profile = "${var.aws_profile}"
 }
+
+
 
